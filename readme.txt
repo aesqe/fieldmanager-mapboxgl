@@ -1,4 +1,4 @@
-=== File Gallery ===
+=== Fieldmanager Mapbox GL ===
 Contributors: aesqe
 Donate link: http://skyphe.org/donate/
 Tags: fieldmanager, maps, map, mapbox, mapboxgl
