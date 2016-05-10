@@ -17,8 +17,12 @@ Adds a Fieldmanager_MapboxGL field which renders a Mapbox GL map on which you ca
 ))
 ```
 
-## Changelog
+### Changelog
 
-### 0.1.0
+#### 0.1.1
+* May 10th, 2016.
+* minor cosmetic modifications to better follow Fieldmanager standards
+
+#### 0.1.0
 * May 9th, 2016.
 * initial release
