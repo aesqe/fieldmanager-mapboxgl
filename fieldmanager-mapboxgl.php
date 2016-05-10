@@ -12,7 +12,7 @@ if ( ! defined('ABSPATH') ) {
 	exit;
 }
 
-define('FM_MAPBOXGL_VERSION', '0.1.0');
+define('FM_MAPBOXGL_VERSION', '0.1.1');
 define('FM_MAPBOXGL_PATH', plugin_dir_path(__FILE__));
 define('FM_MAPBOXGL_URL', plugin_dir_url(__FILE__) );
 
