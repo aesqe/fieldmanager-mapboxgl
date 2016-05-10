@@ -4,7 +4,7 @@ Donate link: http://skyphe.org/donate/
 Tags: fieldmanager, maps, map, mapbox, mapboxgl
 Requires at least: 4.0
 Tested up to: 4.5.2
-Stable tag: 0.1.0
+Stable tag: 0.1.1
 
 == Description ==
 
@@ -26,6 +26,10 @@ Adds a Fieldmanager_MapboxGL field which renders a Mapbox GL map on which you ca
 ``
 
 == Changelog ==
+
+= 0.1.1 =
+* May 10th, 2016.
+* minor cosmetic modifications to better follow Fieldmanager standards
 
 = 0.1.0 =
 * May 9th, 2016.

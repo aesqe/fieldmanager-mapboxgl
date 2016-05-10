@@ -3,7 +3,7 @@
 	Plugin Name: Fieldmanager Mapbox GL
 	Plugin URI: https://github.com/aesqe/fm-mapboxgl
 	Description: A Mapbox GL field type for Fieldmanager
-	Version: 0.1.0
+	Version: 0.1.1
 	Author: Bruno "Aesqe" Babic
 	Author URI: http://skyphe.org
 */
@@ -22,4 +22,4 @@ function fm_mapboxgl_init ()
 		require_once(__DIR__ . '/php/class-fieldmanager-mapboxgl.php');
 	}
 }
-add_action('after_setup_theme', 'fm_mapboxgl_init');
+add_action('plugins_loaded', 'fm_mapboxgl_init');
