@@ -27,6 +27,10 @@ Adds a Fieldmanager_MapboxGL field which renders a Mapbox GL map on which you ca
 
 == Changelog ==
 
+= 0.1.3 =
+* May 13th, 2016.
+* bugfix: wrong field name in element html
+
 = 0.1.2 =
 * May 13th, 2016.
 * implemented a better check for the closest marker

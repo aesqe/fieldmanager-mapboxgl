@@ -65,7 +65,7 @@ class Fieldmanager_MapboxGL extends Fieldmanager_Field {
 			esc_attr($id),
 			esc_attr($this->mapheight),
 			esc_attr($this->mapwidth),
-			esc_attr($this->name),
+			esc_attr($this->get_form_name()),
 			esc_attr($value),
 			esc_attr($id)
 		);
