@@ -64,15 +64,23 @@ jQuery(document).ready(function()
 			// clicked on a marker - remove it
 			if( features.length )
 			{
-				var featureCoords = features[0].geometry.coordinates;
-				var markerIndex = markers.findIndex(function(marker)	{
-					return diffLessThan(
-						featureCoords, marker.geometry.coordinates,	0.00005
-					);
-				});
+				// "queryRenderedFeatures"-returned coords are not exactly
+				// the same as marker coords on the "markers" layer, so we
+				// need to determine the closest marker manually
+				var featCoords = features[0].geometry.coordinates;
+				var closest = markers.reduce(function(prev, curr, i, arr)
+				{
+					var distance = getDistance(featCoords, curr.geometry.coordinates);
+					
+					if( prev.distance > distance ) {
+						return {index: i, distance: distance};
+					}
 
-				if( markerIndex ) {
-					markers.splice(markerIndex, 1);
+					return prev;
+				}, {index: -1, distance: Number.POSITIVE_INFINITY});
+
+				if( closest.index > -1 ) {
+					markers.splice(closest.index, 1);
 				}
 			}
 			else
@@ -124,12 +132,9 @@ jQuery(document).ready(function()
 		});
 	});
 
-	// "queryRenderedFeatures" returned coords are not exactly the same as marker 
-	// coords on the "markers" layer, so here's this function that checks if a  
-	// feature's coords are "close enough" to the marker coords :|
-	function diffLessThan (a, b, val)
+	function getDistance ( a, b )
 	{
-		return val > Math.abs(a[0] - b[0]) && val > Math.abs(a[1] - b[1]);
+		return Math.pow(Math.abs(a[0] - b[0]), 2) + Math.pow(Math.abs(a[1] - b[1]), 2);
 	}
 
 	function createMarker ( coords, markersymbol, title, description )

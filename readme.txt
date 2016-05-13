@@ -27,6 +27,10 @@ Adds a Fieldmanager_MapboxGL field which renders a Mapbox GL map on which you ca
 
 == Changelog ==
 
+= 0.1.2 =
+* May 13th, 2016.
+* implemented a better check for the closest marker
+
 = 0.1.1 =
 * May 10th, 2016.
 * minor cosmetic modifications to better follow Fieldmanager standards
